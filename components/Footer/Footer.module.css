@@ -1,0 +1,31 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 24px 0;
+  border-top: 1px solid #21262d;
+}
+
+.footer a {
+  color: #59A6FF;
+  font-size: 12px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
+a.githubLogo {
+  color: #30363d;
+  margin: 0 32px;
+}
+a.githubLogo:hover {
+  color: #6D7781;
+  text-decoration: none;
+}
+.githubLogo i {
+  font-size: 2em;
+  height: auto;
+}
+
