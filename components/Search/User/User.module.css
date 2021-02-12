@@ -1,0 +1,24 @@
+.user { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+  min-height: 200px;
+  color: #c9d1d9;
+  border: 1px solid #c9d1d9;
+  border-radius: 6px;
+  margin: 16px 0;
+  cursor: pointer;
+  transition: .3s;
+}
+.user:hover {
+  color: #59A6FF;
+  background-color: #30363d;
+}
+
+.login {
+  font-size: 1.4em;
+  padding-top: 16px;
+}
+

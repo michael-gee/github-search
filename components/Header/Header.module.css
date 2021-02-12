@@ -27,3 +27,17 @@ a.githubLogo {
   flex: auto;
   font-weight: 600;
 }
+
+.profileImg > image {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 600px){
+  .header {
+    justify-content: space-between;
+  }
+
+  .nav {
+    display: none;
+  }
+}

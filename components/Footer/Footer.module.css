@@ -29,3 +29,14 @@ a.githubLogo:hover {
   height: auto;
 }
 
+
+@media screen and (max-width: 600px){
+  .footer {
+    flex-direction: column;
+  }
+
+  a.githubLogo {
+    display: none;
+  }
+}
+

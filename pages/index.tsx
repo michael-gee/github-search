@@ -6,7 +6,7 @@ import { Footer } from '../components/Footer'
 import { useSearch, LoadStates } from '../hooks/useSearch'
 
 const SearchPage = () => {
-	const { loadStatus, results, onUpdateSearch } = useSearch()
+	const { loadStatus, results, page, onUpdatePage, onUpdateSearch } = useSearch()
 
 	return (
 		<>
@@ -30,7 +30,19 @@ const SearchPage = () => {
 
 				{loadStatus === LoadStates.SUCCESS && results.total > 0 && (
 					<>
-						<Search.Pagination total={results.total} />
+						<Search.List>
+							{results.items.map((user: any) => {
+								return (
+									<Search.User
+										login={user.login}
+										avatar={user.avatar_url}
+										url={user.html_url}
+										key={user.id}
+									/>
+								)
+							})}
+						</Search.List>
+						<Search.Pagination page={page} total={results.total} onUpdatePage={onUpdatePage} />
 					</>
 				)}
 			</Search>

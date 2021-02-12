@@ -1,4 +1,3 @@
-// import Image from 'next/image'
 import { Icon } from 'semantic-ui-react'
 
 import styles from './Header.module.css'
@@ -24,9 +23,9 @@ export const Header = () => {
 				<a href="https://github.com/new">
 					<Icon name="add" />
 				</a>
-				{/* <a href="https://github.com/michaelgee22">
-					<Image src="/images/michael.jpg" width="24px" height="24px" />
-				</a> */}
+				<a href="https://github.com/michaelgee22">
+					<Icon name="user circle" />
+				</a>
 			</div>
 		</header>
 	)
