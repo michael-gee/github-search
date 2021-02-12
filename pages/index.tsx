@@ -3,28 +3,41 @@ import { Header } from '../components/Header'
 import { Search } from '../components/Search'
 import { Footer } from '../components/Footer'
 
-const SearchPage = () => (
-	<>
-		<Head>
-			<title>Code Search</title>
-			<meta
-				name="description"
-				content="Michael Gee's clone implementation of Github's search page."
-			/>
-			<meta
-				property="og:image"
-				content="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
-			/>
-		</Head>
+import { useSearch, LoadStates } from '../hooks/useSearch'
 
-		<Header />
+const SearchPage = () => {
+	const { loadStatus, results, onUpdateSearch } = useSearch()
 
-		<Search>
-			<h1 style={{ color: 'white' }}>Search</h1>
-		</Search>
+	return (
+		<>
+			<Head>
+				<title>Code Search</title>
+				<meta
+					name="description"
+					content="Michael Gee's clone implementation of Github's search page."
+				/>
+				<meta
+					property="og:image"
+					content="https://github.githubassets.com/images/modules/open_graph/github-logo.png"
+				/>
+			</Head>
 
-		<Footer />
-	</>
-)
+			<Header />
+
+			<Search>
+				<Search.Title />
+				<Search.Input onUpdateSearch={onUpdateSearch} />
+
+				{loadStatus === LoadStates.SUCCESS && results.total > 0 && (
+					<>
+						<Search.Pagination total={results.total} />
+					</>
+				)}
+			</Search>
+
+			<Footer />
+		</>
+	)
+}
 
 export default SearchPage

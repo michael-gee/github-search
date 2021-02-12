@@ -1,0 +1,10 @@
+.pagination {
+  margin: 0 auto;
+  text-align: center;
+  color: #c9d1d9;
+}
+
+.pagination span {
+  display: block;
+  margin: 16px 0;
+}

@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import { Icon } from 'semantic-ui-react'
 
 import styles from './Header.module.css'
